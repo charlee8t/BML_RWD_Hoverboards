@@ -15,12 +15,14 @@ $visual-grid:true;
 ******************************************************************************/
 
 /* COLORS */
+
 $primary-color: #FA707F;
 $secondary-color:#24B1A9;
 $link-hover-color:#FFE29C;
 
+/* FONTS */
 
-
+$font-main: 'Alegreya Sans SC', sans-serif;
 
 /*****************************************************************************
  Omega Reset
@@ -82,7 +84,7 @@ body {
 	@include clearfix;
 	text-align: center;
 	background-color:$primary-color;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: $font-main;
 
 
 	.site-logo {
@@ -120,7 +122,7 @@ body {
 
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: $font-main;
 	
 
 	li {
@@ -195,7 +197,7 @@ body {
 
 	h2 {
 
-		font-family: 'Alegreya Sans SC', sans-serif;
+		font-family: $font-main;
 
 
 	}
@@ -207,7 +209,7 @@ body {
 
 	text-align: center;
 	text-transform: uppercase;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: $font-main;
 	
 
 	li {
@@ -303,7 +305,7 @@ address {
 
 	
 	text-transform: uppercase;
-	font-family: 'Alegreya Sans SC', sans-serif;
+	font-family: $font-main;
 	font-size: 1em;
 	margin-left: 100px;
 	background-color: $link-hover-color;
@@ -373,7 +375,7 @@ footer {
 
 		text-align: center;
 		text-transform: uppercase;
-		font-family: 'Alegreya Sans SC', sans-serif;
+		font-family: $font-main;
 		padding: 1em;
 
 
@@ -441,7 +443,7 @@ footer {
 		display: block; 
 		text-align: center;
 		color: $secondary-color;
-		font-family: 'Alegreya Sans SC', sans-serif;
+		font-family: $font-main;
 		font-style: italic;
 		font-size: 2em;
 	}
