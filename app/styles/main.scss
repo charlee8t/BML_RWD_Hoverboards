@@ -23,6 +23,8 @@ $link-hover-color:#FFE29C;
 /* FONTS */
 
 $font-main: 'Alegreya Sans SC', sans-serif;
+$font-parag: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   
 
 /*****************************************************************************
  Omega Reset
@@ -166,6 +168,8 @@ body {
 .product-meta {
 
 	padding: 0;
+	font-family: $font-parag;
+	font-weight: 300;
 
 	h2 {
 		background-color: $link-hover-color;
@@ -345,7 +349,7 @@ address {
 
 .content {
 
-	padding-top: 1em;
+	padding: 1em 0;
 }
 .product {
 
@@ -446,6 +450,7 @@ footer {
 		font-family: $font-main;
 		font-style: italic;
 		font-size: 2em;
+		margin:0;
 	}
 	
 	.product {
