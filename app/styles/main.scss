@@ -1,0 +1,460 @@
+/*****************************************************************************
+  Class06Practice
+******************************************************************************/
+
+
+@import '../../bower_components/bourbon/dist/_bourbon.scss';
+
+$visual-grid:true;
+
+@import '../../bower_components/neat/app/assets/stylesheets/_neat.scss';
+
+
+/*****************************************************************************
+ Variables
+******************************************************************************/
+
+/* COLORS */
+$primary-color: #FA707F;
+$secondary-color:#24B1A9;
+$link-hover-color:#FFE29C;
+
+
+
+
+/*****************************************************************************
+ Omega Reset
+******************************************************************************/
+
+
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
+
+@mixin list-unstyled {
+
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+}
+
+
+/*****************************************************************************
+  Base Styles
+******************************************************************************/
+img {
+
+	max-width: 100%;
+}
+
+html,
+body {
+
+	margin: 0 2px;
+	padding: 0;
+
+}
+
+
+
+/*****************************************************************************
+  Layout Styles
+******************************************************************************/
+
+
+
+
+
+
+
+/*****************************************************************************
+  Module Styles
+******************************************************************************/
+
+
+/* -------- MOBILE --------------- */
+
+
+.site-branding{
+	@include clearfix;
+	text-align: center;
+	background-color:$primary-color;
+	font-family: 'Alegreya Sans SC', sans-serif;
+
+
+	.site-logo {
+
+	display: none;
+
+	}
+
+	.site-title {
+	
+		margin:0;
+		padding: 20px 0;
+		color: white;
+		text-transform: uppercase;
+
+
+	}
+
+}
+
+.intro {
+
+	display: none;
+}
+
+.menu,
+.product-listing {
+
+	@include list-unstyled;
+	
+}
+
+
+.site-menu {
+
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	
+
+	li {
+
+		
+		background-color: $secondary-color;
+		border-bottom:1px solid white;
+		padding: 2px 0;
+		
+		a:link {
+
+			text-decoration: none;
+			color:white;
+		}
+
+		a:visited {
+			
+			text-decoration: none;
+			color: white;
+		}
+
+		a:hover{
+
+			color:$link-hover-color;
+		}
+
+	}
+
+}
+
+.product {
+
+	padding: .5em 0;
+
+	img {
+
+		display: none;
+	}
+}
+
+.product-meta {
+
+	padding: 0;
+
+	h2 {
+		background-color: $link-hover-color;
+		color: $primary-color;
+		margin: 0;
+		padding: .5em;
+		text-align: center;
+	}
+	
+	
+
+		a:link{
+
+			text-decoration: none;
+			color:$secondary-color;
+		}
+
+		a:visited{
+
+			text-decoration: none;
+			color:$secondary-color;
+		}
+
+	.product-link {
+
+		font-style: italic; 
+		margin-left: .5em;
+	}
+
+	h2 {
+
+		font-family: 'Alegreya Sans SC', sans-serif;
+
+
+	}
+
+}
+
+
+.footer-menu {
+
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	
+
+	li {
+
+		
+		background-color: $secondary-color;
+		border-bottom:1px solid white;
+		padding: 2px 0;
+		
+		a:link {
+
+			text-decoration: none;
+			color:white;
+		}
+
+		a:visited {
+			
+			text-decoration: none;
+			color: white;
+		}
+
+		a:hover{
+
+			color:$link-hover-color;
+		}
+
+	}
+
+}
+
+
+address {
+		
+		font-size: .9em;
+		text-align: center;
+		padding: 10px;	
+		br {
+
+			display:none;
+		}
+}
+
+
+/* -------------667PX-----------------------------*/
+
+
+@media screen and (min-width: 667px){
+	
+	.product-listing{
+
+		@include outer-container;
+	}
+
+	.product {
+
+		@include span-columns(6);
+		@include omega(2n);
+	}
+
+	
+	.site-branding{
+
+	@include clearfix;
+	height: 40px;
+	background-color: white;
+
+	.site-logo {
+
+		float: left;
+	}
+
+
+	.site-title {
+		
+		padding: 0;
+		height: 100%;
+		margin:0;
+		color: white;
+		text-transform: lowercase;
+		background-color: $primary-color;
+
+	}
+
+	.site-logo {
+
+		display: inline;
+	}
+
+
+}
+
+.site-menu {
+
+	
+	text-transform: uppercase;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 1em;
+	margin-left: 100px;
+	background-color: $link-hover-color;
+	margin: 0;
+	padding: 0.35em;
+	
+	
+
+	li {
+
+		
+		background-color: transparent;
+		border-bottom: 0;
+		padding: 0 1em;
+		display: inline;
+		
+		a:link {
+
+			text-decoration: none;
+			color:$primary-color;
+		}
+
+		a:visited {
+			
+			text-decoration: none;
+			color: $primary-color;
+		}
+
+		a:hover{
+
+			color:$secondary-color;
+		}
+
+	}
+
+}
+
+.content {
+
+	padding-top: 1em;
+}
+.product {
+
+	img {
+
+		display: inline-block;
+	}
+
+	.product-meta {
+
+		h2 {
+			padding: 0 0 0 .25em;
+			color: $primary-color;
+			text-align: left;
+		}
+	}
+}
+
+
+footer {
+
+	background-color: $secondary-color;
+	@include clearfix;
+
+
+	.footer-menu {
+
+		text-align: center;
+		text-transform: uppercase;
+		font-family: 'Alegreya Sans SC', sans-serif;
+		padding: 1em;
+
+
+
+		li {
+
+			
+			display: inline;
+			border-bottom:0;
+			padding: 2px 4px;
+			background-color: transparent;
+			
+			a:link {
+
+				text-decoration: none;
+				color:white;
+			}
+
+			a:visited {
+				
+				text-decoration: none;
+				color: white;
+			}
+
+			a:hover{
+
+				color:$link-hover-color;
+			}
+
+		}
+
+	}
+
+
+	address {
+			
+			font-size: .9em;
+			text-align: center;
+			padding: 10px;	
+			color: white;
+			line-height: 1.5em;
+			font-weight: normal;
+			background-color: $primary-color;
+
+			br {
+
+				display:none;
+			}
+
+	}
+}
+
+
+/* -------------------- 900PX ----------------------*/
+
+
+
+}
+
+@media screen and (min-width: 900px){
+
+
+	.intro {
+
+		display: block; 
+		text-align: center;
+		color: $secondary-color;
+		font-family: 'Alegreya Sans SC', sans-serif;
+		font-style: italic;
+		font-size: 2em;
+	}
+	
+	.product {
+		
+		@include omega-reset(2n);
+		@include span-columns(3);
+		@include omega(4n);
+
+	}
+
+
+}
+
+
