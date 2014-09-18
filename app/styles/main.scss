@@ -36,9 +36,7 @@ $font-parag: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
   &:nth-child(#{$nth}+1) { clear: none }
 }
 
-
 @mixin list-unstyled {
-
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -50,16 +48,13 @@ $font-parag: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
   Base Styles
 ******************************************************************************/
 img {
-
 	max-width: 100%;
 }
 
 html,
 body {
-
 	margin: 0 2px;
 	padding: 0;
-
 }
 
 
@@ -82,17 +77,14 @@ body {
 /* -------- MOBILE --------------- */
 
 
-.site-branding{
+.site-branding {
 	@include clearfix;
 	text-align: center;
 	background-color:$primary-color;
 	font-family: $font-main;
 
-
 	.site-logo {
-
 	display: none;
-
 	}
 
 	.site-title {
@@ -422,12 +414,9 @@ footer {
 
 }
 
+}
 
 /* -------------------- 900PX ----------------------*/
-
-
-
-}
 
 @media screen and (min-width: 900px){
 
