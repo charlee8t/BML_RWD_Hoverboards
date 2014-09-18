@@ -246,15 +246,22 @@ body {
 
 
 address {
-		
-		font-size: .9em;
-		text-align: center;
-		padding: 10px;	
-		br {
+			
+	font-size: .9em;
+	text-align: center;
+	padding: 10px;	
+	color: white;
+	line-height: 1.5em;
+	font-weight: normal;
+	background-color: $primary-color;
 
-			display:none;
-		}
+	br {
+
+		display:none;
+	}
+
 }
+
 
 
 /* -------------667PX-----------------------------*/
@@ -413,23 +420,6 @@ footer {
 
 	}
 
-
-	address {
-			
-			font-size: .9em;
-			text-align: center;
-			padding: 10px;	
-			color: white;
-			line-height: 1.5em;
-			font-weight: normal;
-			background-color: $primary-color;
-
-			br {
-
-				display:none;
-			}
-
-	}
 }
 
 
