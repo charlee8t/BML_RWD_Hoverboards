@@ -40,13 +40,13 @@ $font-parag: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", He
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-
 }
 
 
 /*****************************************************************************
   Base Styles
 ******************************************************************************/
+
 img {
 	max-width: 100%;
 }
@@ -93,72 +93,54 @@ body {
 		padding: 20px 0;
 		color: white;
 		text-transform: uppercase;
-
-
 	}
 
 }
 
 .intro {
-
 	display: none;
 }
 
 .menu,
 .product-listing {
-
 	@include list-unstyled;
-	
 }
 
-
 .site-menu {
-
 	text-align: center;
 	text-transform: uppercase;
 	font-family: $font-main;
 	
-
 	li {
-
-		
 		background-color: $secondary-color;
 		border-bottom:1px solid white;
 		padding: 2px 0;
 		
 		a:link {
-
 			text-decoration: none;
 			color:white;
 		}
 
-		a:visited {
-			
+		a:visited {	
 			text-decoration: none;
 			color: white;
 		}
 
-		a:hover{
-
+		a:hover {
 			color:$link-hover-color;
 		}
-
 	}
-
 }
 
 .product {
-
 	padding: .5em 0;
 
 	img {
-
 		display: none;
 	}
 }
 
 .product-meta {
-
 	padding: 0;
 	font-family: $font-parag;
 	font-weight: 300;
@@ -171,74 +153,54 @@ body {
 		text-align: center;
 	}
 	
-	
+	a:link{
+		text-decoration: none;
+		color:$secondary-color;
+	}
 
-		a:link{
-
-			text-decoration: none;
-			color:$secondary-color;
-		}
-
-		a:visited{
-
-			text-decoration: none;
-			color:$secondary-color;
-		}
+	a:visited{
+		text-decoration: none;
+		color:$secondary-color;
+	}
 
 	.product-link {
-
 		font-style: italic; 
 		margin-left: .5em;
 	}
 
 	h2 {
-
 		font-family: $font-main;
-
-
 	}
-
 }
 
 
 .footer-menu {
-
 	text-align: center;
 	text-transform: uppercase;
 	font-family: $font-main;
 	
-
 	li {
-
-		
 		background-color: $secondary-color;
 		border-bottom:1px solid white;
 		padding: 2px 0;
 		
 		a:link {
-
 			text-decoration: none;
 			color:white;
 		}
 
-		a:visited {
-			
+		a:visited {	
 			text-decoration: none;
 			color: white;
 		}
 
 		a:hover{
-
 			color:$link-hover-color;
 		}
-
 	}
-
 }
 
-
-address {
-			
+address {			
 	font-size: .9em;
 	text-align: center;
 	padding: 10px;	
@@ -248,10 +210,8 @@ address {
 	background-color: $primary-color;
 
 	br {
-
 		display:none;
 	}
-
 }
 
 
@@ -261,168 +221,127 @@ address {
 
 @media screen and (min-width: 667px){
 	
-	.product-listing{
-
+	.product-listing {
 		@include outer-container;
 	}
 
 	.product {
-
 		@include span-columns(6);
 		@include omega(2n);
 	}
 
-	
-	.site-branding{
+	.site-branding {
+		@include clearfix;
+		height: 40px;
+		background-color: white;
 
-	@include clearfix;
-	height: 40px;
-	background-color: white;
-
-	.site-logo {
-
-		float: left;
-	}
-
-
-	.site-title {
-		
-		padding: 0;
-		height: 100%;
-		margin:0;
-		color: white;
-		text-transform: lowercase;
-		background-color: $primary-color;
-
-	}
-
-	.site-logo {
-
-		display: inline;
-	}
-
-
-}
-
-.site-menu {
-
-	
-	text-transform: uppercase;
-	font-family: $font-main;
-	font-size: 1em;
-	margin-left: 100px;
-	background-color: $link-hover-color;
-	margin: 0;
-	padding: 0.35em;
-	
-	
-
-	li {
-
-		
-		background-color: transparent;
-		border-bottom: 0;
-		padding: 0 1em;
-		display: inline;
-		
-		a:link {
-
-			text-decoration: none;
-			color:$primary-color;
+		.site-logo {
+			float: left;
 		}
 
-		a:visited {
-			
-			text-decoration: none;
-			color: $primary-color;
+		.site-title {		
+			padding: 0;
+			height: 100%;
+			margin:0;
+			color: white;
+			text-transform: lowercase;
+			background-color: $primary-color;
 		}
 
-		a:hover{
-
-			color:$secondary-color;
-		}
-
-	}
-
-}
-
-.content {
-
-	padding: 1em 0;
-}
-.product {
-
-	img {
-
-		display: inline-block;
-	}
-
-	.product-meta {
-
-		h2 {
-			padding: 0 0 0 .25em;
-			color: $primary-color;
-			text-align: left;
+		.site-logo {
+			display: inline;
 		}
 	}
-}
 
-
-footer {
-
-	background-color: $secondary-color;
-	@include clearfix;
-
-
-	.footer-menu {
-
-		text-align: center;
+	.site-menu {
 		text-transform: uppercase;
 		font-family: $font-main;
-		padding: 1em;
-
-
-
-		li {
-
-			
-			display: inline;
-			border-bottom:0;
-			padding: 2px 4px;
+		font-size: 1em;
+		margin-left: 100px;
+		background-color: $link-hover-color;
+		margin: 0;
+		padding: 0.35em;
+		
+		li {			
 			background-color: transparent;
-			
+			border-bottom: 0;
+			padding: 0 1em;
+			display: inline;
 			a:link {
-
 				text-decoration: none;
-				color:white;
+				color:$primary-color;
 			}
 
-			a:visited {
-				
+			a:visited {	
 				text-decoration: none;
-				color: white;
+				color: $primary-color;
 			}
 
 			a:hover{
-
-				color:$link-hover-color;
+				color:$secondary-color;
 			}
-
 		}
-
 	}
 
-}
+	.content {
+		padding: 1em 0;
+	}
 
+	.product {
+
+		img {
+			display: inline-block;
+		}
+
+		.product-meta {
+
+			h2 {
+				padding: 0 0 0 .25em;
+				color: $primary-color;
+				text-align: left;
+			}
+		}
+	}
+
+	footer {
+		@include clearfix;
+		background-color: $secondary-color;
+
+		.footer-menu {
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $font-main;
+			padding: 1em;
+
+			li {				
+				display: inline;
+				border-bottom:0;
+				padding: 2px 4px;
+				background-color: transparent;
+				
+				a:link {
+					text-decoration: none;
+					color:white;
+				}
+
+				a:visited {			
+					text-decoration: none;
+					color: white;
+				}
+
+				a:hover {
+					color:$link-hover-color;
+				}
+			}
+		}
+	}
 }
 
 /* -------------------- 900PX ----------------------*/
 
-@media screen and (min-width: 900px){
-
+@media screen and (min-width: 900px) {
 
 	.intro {
-
 		display: block; 
 		text-align: center;
 		color: $secondary-color;
@@ -433,14 +352,10 @@ footer {
 	}
 	
 	.product {
-		
 		@include omega-reset(2n);
 		@include span-columns(3);
 		@include omega(4n);
-
 	}
-
-
 }
 
 
