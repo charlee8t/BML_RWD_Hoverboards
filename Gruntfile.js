@@ -230,7 +230,7 @@ module.exports = function (grunt) {
           },
           pages: {
             options: {
-              remote: '!!! git@github.com:charlee8t/BML_RWD_Hoverboards.git',
+              remote: 'git@github.com:charlee8t/BML_RWD_Hoverboards.git',
               branch: 'gh-pages'
             }
           },
