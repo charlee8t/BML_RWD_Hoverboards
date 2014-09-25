@@ -141,8 +141,8 @@ address {
   address br {
     display: none; }
 
-/* -------------667PX-----------------------------*/
-@media screen and (min-width: 667px) {
+/* -------------683PX-----------------------------*/
+@media screen and (min-width: 683px) {
   .product-listing {
     max-width: 68em;
     margin-left: auto;
